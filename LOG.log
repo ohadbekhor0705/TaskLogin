@@ -1,0 +1,20 @@
+2025-09-09 09:42:26,444 - INFO - [CLIENT_BL] Exception on connect: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-09-09 09:42:28,693 - INFO - [SERVER_BL] listening...
+2025-09-09 09:42:30,053 - INFO - [CLIENT_BL] ('127.0.0.1', 50248) connected
+2025-09-09 09:42:30,055 - INFO - [SERVER_BL] Client connected <socket.socket fd=1128, family=2, type=1, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 50248)>('127.0.0.1', 50248) 
+2025-09-09 09:42:30,056 - INFO - [SERVER_BL] ACTIVE CONNECTION 2
+2025-09-09 09:42:34,654 - INFO - [Client GUI] Register - Received data from Login Wnd : {"login": " ", "password": " "}
+2025-09-09 09:42:34,655 - INFO - {"login": " ", "password": " "}
+2025-09-09 09:42:34,658 - INFO - [CLIENT_BL] send ('127.0.0.1', 50248) REG 
+2025-09-09 09:42:34,659 - INFO - [SERVER_BL] received from ('127.0.0.1', 50248)] - cmd: REG, args: ['{"login": " ", "password": " "}']
+2025-09-09 09:42:34,673 - INFO - [SERVER_BL] send - USER REGISTERED
+2025-09-09 09:42:36,365 - INFO - [Client GUI] Register - Received data from Login Wnd : {"login": " ", "password": " "}
+2025-09-09 09:42:36,367 - INFO - {"login": " ", "password": " "}
+2025-09-09 09:42:36,368 - INFO - [CLIENT_BL] send ('127.0.0.1', 50248) REG 
+2025-09-09 09:42:36,368 - INFO - [SERVER_BL] received from ('127.0.0.1', 50248)] - cmd: REG, args: ['{"login": " ", "password": " "}']
+2025-09-09 09:42:36,384 - INFO - [SERVER_BL] send - USER REGISTERED
+2025-09-09 09:43:10,220 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": " ohad", "password": " 1233"}
+2025-09-09 09:43:10,221 - INFO - {"login": " ohad", "password": " 1233"}
+2025-09-09 09:43:10,222 - INFO - [CLIENT_BL] send ('127.0.0.1', 50248) SIGNIN 
+2025-09-09 09:43:10,222 - INFO - [SERVER_BL] received from ('127.0.0.1', 50248)] - cmd: SIGNIN, args: ['{"login": " ohad", "password": " 1233"}']
+2025-09-09 09:43:10,229 - INFO - [SERVER_BL] send - USER EXIST!
