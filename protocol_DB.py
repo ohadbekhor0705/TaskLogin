@@ -20,6 +20,8 @@ def create_response_msg_DB(cmd: str,args: list) -> str:
     """
 
     json_data: dict = json.loads(args[0])
+    if json_data["login"] == "" or json_data["password"] == "":
+        return "LOGIN AND PASSWORD MUSTN'T BE EMPTY!"
     if cmd == "REG":
         if username_doesnt_exist(json_data):
             save_client_data(json_data)
@@ -27,7 +29,7 @@ def create_response_msg_DB(cmd: str,args: list) -> str:
         else:
             return "THIS USERNAME IS ALREADY TAKEN"
     if cmd == "SIGNIN":
-        return "USER EXIST!" if exist(json_data) else "USERNAME OR PASSWORD ARE INVALID"
+        return f"Welcome back {json_data["login"]}!" if exist(json_data) else "USERNAME OR PASSWORD ARE INVALID"
     return ""
     
 

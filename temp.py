@@ -13,11 +13,10 @@ def exist(client_data) -> bool:
             cur = conn.cursor()
 
             # checking if user with username and password exist
-            exist: bool = cur.execute( 
-            "SELECT * FROM users WHERE login = :login AND password = :password", 
-            client_data) is not None
+            cur.execute("DELETE FROM users")
+            conn.commit()
         return exist  #returning the result.
     except Exception as e: # handling errors.
         return False
-    
-print(exist({"login": " ohad", "password": " 1223"}))
+
+exit({"ddd":"ddd"})

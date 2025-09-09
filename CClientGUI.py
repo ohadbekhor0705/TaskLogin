@@ -34,8 +34,6 @@ class CClientGUI(CClientBL):
         self._btn_login = None
 
 
-        self.message: str = ""
-
         self.create_ui()
 
     def create_ui(self) -> None:
@@ -147,20 +145,23 @@ class CClientGUI(CClientBL):
         def callback_register(data):
             write_to_log(f"[Client GUI] Register - Received data from Login Wnd : {data}")
             self.send_data("REG",data)
+            #self._root.after(100,self.update_received_entry)
 
         def callback_signin(data: json):
             write_to_log(f"[Client GUI] SignIn - Received data from Login Wnd : {data}")
             self.send_data("SIGNIN",data)
+            self.update_received_entry()
+            
         
-        def get_login_response() -> str: return self.message
-
-        loc_wnd = CLoginGUI(self._root, callback_register, callback_signin, get_login_response)
+        loc_wnd = CLoginGUI(self._root, callback_register, callback_signin, self.update_received_entry)
         loc_wnd.run()
 
-    def update_received_entry(self) -> None:
-        self.message = self.receive_data()
+    def update_received_entry(self) -> str:
+        message = self.receive_data()
+        print(f"{message}")
+        print(f"received from server{message}")
         # self._text_Received.delete(0, tk.END)
-        self._text_Received.insert(tk.END, self.message + "\n")
+        self._text_Received.insert(tk.END, message + "\n")
 
 if __name__ == "__main__":
     client = CClientGUI(CLIENT_HOST,PORT)

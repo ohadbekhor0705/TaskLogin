@@ -1,20 +1,50 @@
-2025-09-09 09:42:26,444 - INFO - [CLIENT_BL] Exception on connect: [WinError 10061] No connection could be made because the target machine actively refused it
-2025-09-09 09:42:28,693 - INFO - [SERVER_BL] listening...
-2025-09-09 09:42:30,053 - INFO - [CLIENT_BL] ('127.0.0.1', 50248) connected
-2025-09-09 09:42:30,055 - INFO - [SERVER_BL] Client connected <socket.socket fd=1128, family=2, type=1, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 50248)>('127.0.0.1', 50248) 
-2025-09-09 09:42:30,056 - INFO - [SERVER_BL] ACTIVE CONNECTION 2
-2025-09-09 09:42:34,654 - INFO - [Client GUI] Register - Received data from Login Wnd : {"login": " ", "password": " "}
-2025-09-09 09:42:34,655 - INFO - {"login": " ", "password": " "}
-2025-09-09 09:42:34,658 - INFO - [CLIENT_BL] send ('127.0.0.1', 50248) REG 
-2025-09-09 09:42:34,659 - INFO - [SERVER_BL] received from ('127.0.0.1', 50248)] - cmd: REG, args: ['{"login": " ", "password": " "}']
-2025-09-09 09:42:34,673 - INFO - [SERVER_BL] send - USER REGISTERED
-2025-09-09 09:42:36,365 - INFO - [Client GUI] Register - Received data from Login Wnd : {"login": " ", "password": " "}
-2025-09-09 09:42:36,367 - INFO - {"login": " ", "password": " "}
-2025-09-09 09:42:36,368 - INFO - [CLIENT_BL] send ('127.0.0.1', 50248) REG 
-2025-09-09 09:42:36,368 - INFO - [SERVER_BL] received from ('127.0.0.1', 50248)] - cmd: REG, args: ['{"login": " ", "password": " "}']
-2025-09-09 09:42:36,384 - INFO - [SERVER_BL] send - USER REGISTERED
-2025-09-09 09:43:10,220 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": " ohad", "password": " 1233"}
-2025-09-09 09:43:10,221 - INFO - {"login": " ohad", "password": " 1233"}
-2025-09-09 09:43:10,222 - INFO - [CLIENT_BL] send ('127.0.0.1', 50248) SIGNIN 
-2025-09-09 09:43:10,222 - INFO - [SERVER_BL] received from ('127.0.0.1', 50248)] - cmd: SIGNIN, args: ['{"login": " ohad", "password": " 1233"}']
-2025-09-09 09:43:10,229 - INFO - [SERVER_BL] send - USER EXIST!
+2025-09-09 18:23:12,011 - INFO - [SERVER_BL] listening...
+2025-09-09 18:23:18,520 - INFO - [CLIENT_BL] ('127.0.0.1', 53123) connected
+2025-09-09 18:23:18,521 - INFO - [SERVER_BL] Client connected <socket.socket fd=1048, family=2, type=1, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 53123)>('127.0.0.1', 53123) 
+2025-09-09 18:23:18,521 - INFO - [SERVER_BL] ACTIVE CONNECTION 2
+2025-09-09 18:23:23,774 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": "\u05d2\u05d2\u05db\u05e8\u05d2\u05db\u05d9", "password": "\u05e2\u05d9\u05db\u05e2\u05d9\u05db\u05e2\u05d9\u05db\u05e2\u05d9"}
+2025-09-09 18:23:23,774 - INFO - {"login": "\u05d2\u05d2\u05db\u05e8\u05d2\u05db\u05d9", "password": "\u05e2\u05d9\u05db\u05e2\u05d9\u05db\u05e2\u05d9\u05db\u05e2\u05d9"}
+2025-09-09 18:23:23,774 - INFO - [CLIENT_BL] send ('127.0.0.1', 53123) SIGNIN 
+2025-09-09 18:23:23,774 - INFO - [SERVER_BL] received from ('127.0.0.1', 53123)] - cmd: SIGNIN, args: ['{"login": "\\u05d2\\u05d2\\u05db\\u05e8\\u05d2\\u05db\\u05d9", "password": "\\u05e2\\u05d9\\u05db\\u05e2\\u05d9\\u05db\\u05e2\\u05d9\\u05db\\u05e2\\u05d9"}']
+2025-09-09 18:23:23,775 - INFO - [SERVER_BL] send - USERNAME OR PASSWORD ARE INVALID
+2025-09-09 18:23:37,159 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": "dsfdfdf", "password": "dfsdf"}
+2025-09-09 18:23:37,159 - INFO - {"login": "dsfdfdf", "password": "dfsdf"}
+2025-09-09 18:23:37,160 - INFO - [CLIENT_BL] send ('127.0.0.1', 53123) SIGNIN 
+2025-09-09 18:23:37,160 - INFO - [SERVER_BL] received from ('127.0.0.1', 53123)] - cmd: SIGNIN, args: ['{"login": "dsfdfdf", "password": "dfsdf"}']
+2025-09-09 18:23:37,161 - INFO - [SERVER_BL] send - USERNAME OR PASSWORD ARE INVALID
+2025-09-09 18:23:38,162 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": "dsfdfdf", "password": "dfsdf"}
+2025-09-09 18:23:38,162 - INFO - {"login": "dsfdfdf", "password": "dfsdf"}
+2025-09-09 18:23:38,162 - INFO - [CLIENT_BL] send ('127.0.0.1', 53123) SIGNIN 
+2025-09-09 18:23:38,162 - INFO - [SERVER_BL] received from ('127.0.0.1', 53123)] - cmd: SIGNIN, args: ['{"login": "dsfdfdf", "password": "dfsdf"}']
+2025-09-09 18:23:38,163 - INFO - [SERVER_BL] send - USERNAME OR PASSWORD ARE INVALID
+2025-09-09 18:24:17,051 - INFO - [CLIENT_BL] ('127.0.0.1', 53131) connected
+fd=1060, family=2, type=1, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 53131)>('127.0.0.1', 53131) 
+2025-09-09 18:24:17,051 - INFO - [SERVER_BL] ACTIVE CONNECTION 2
+2025-09-09 18:24:21,660 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": "fghtfgh", "password": "fghfghh"}
+2025-09-09 18:24:21,661 - INFO - {"login": "fghtfgh", "password": "fghfghh"}
+2025-09-09 18:24:21,661 - INFO - [CLIENT_BL] send ('127.0.0.1', 53131) SIGNIN 
+2025-09-09 18:24:21,661 - INFO - [SERVER_BL] received from ('127.0.0.1', 53131)] - cmd: SIGNIN, args: ['{"login": "fghtfgh", "password": "fghfghh"}']
+2025-09-09 18:24:21,662 - INFO - [SERVER_BL] send - USERNAME OR PASSWORD ARE INVALID
+2025-09-09 18:24:21,768 - INFO - [CLIENT_BL] Exception on receive: invalid literal for int() with base 10: 'USER'
+2025-09-09 18:24:46,664 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": "fghtfgh", "password": "fghfghh"}
+2025-09-09 18:24:46,664 - INFO - {"login": "fghtfgh", "password": "fghfghh"}
+2025-09-09 18:24:46,664 - INFO - [CLIENT_BL] send ('127.0.0.1', 53131) SIGNIN 
+2025-09-09 18:24:46,664 - INFO - [SERVER_BL] received from ('127.0.0.1', 53131)] - cmd: SIGNIN, args: ['{"login": "fghtfgh", "password": "fghfghh"}']
+2025-09-09 18:24:46,665 - INFO - [SERVER_BL] send - USERNAME OR PASSWORD ARE INVALID
+2025-09-09 18:24:46,767 - INFO - [CLIENT_BL] Exception on receive: invalid literal for int() with base 10: 'NAME'
+2025-09-09 18:25:11,164 - INFO - [SERVER_BL] Client connected <socket.socket fd=1092, family=2, type=1, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 53157)>('127.0.0.1', 53157) 
+2025-09-09 18:25:11,165 - INFO - [SERVER_BL] ACTIVE CONNECTION 2
+2025-09-09 18:25:11,164 - INFO - [CLIENT_BL] ('127.0.0.1', 53157) connected
+2025-09-09 18:25:15,608 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": "fghfgh", "password": "fghfghfgh"}
+2025-09-09 18:25:15,608 - INFO - {"login": "fghfgh", "password": "fghfghfgh"}
+2025-09-09 18:25:15,609 - INFO - [CLIENT_BL] send ('127.0.0.1', 53157) SIGNIN 
+2025-09-09 18:25:15,609 - INFO - [SERVER_BL] received from ('127.0.0.1', 53157)] - cmd: SIGNIN, args: ['{"login": "fghfgh", "password": "fghfghfgh"}']
+2025-09-09 18:25:15,610 - INFO - [SERVER_BL] send - USERNAME OR PASSWORD ARE INVALID
+2025-09-09 18:25:15,610 - INFO - [CLIENT_BL] Exception on receive: invalid literal for int() with base 10: 'USER'
+2025-09-09 18:25:26,879 - INFO - [SERVER_BL] Client connected <socket.socket fd=1100, family=2, type=1, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 53169)>('127.0.0.1', 53169) 
+2025-09-09 18:25:26,880 - INFO - [CLIENT_BL] ('127.0.0.1', 53169) connected
+2025-09-09 18:25:29,807 - INFO - [Client GUI] SignIn - Received data from Login Wnd : {"login": "dfgfdg", "password": "dfgdfgdf"}
+2025-09-09 18:25:29,807 - INFO - {"login": "dfgfdg", "password": "dfgdfgdf"}
+2025-09-09 18:25:29,808 - INFO - [CLIENT_BL] send ('127.0.0.1', 53169) SIGNIN 
+2025-09-09 18:25:29,808 - INFO - [SERVER_BL] received from ('127.0.0.1', 53169)] - cmd: SIGNIN, args: ['{"login": "dfgfdg", "password": "dfgdfgdf"}']
+2025-09-09 18:25:29,809 - INFO - [SERVER_BL] send - USERNAME OR PASSWORD ARE INVALID

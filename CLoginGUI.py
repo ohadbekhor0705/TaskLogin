@@ -9,7 +9,7 @@ FONT_BUTTON = (FONT,14)
 
 class CLoginGUI:
 
-    def __init__(self, parent_wnd, callback_register, callback_signin, get_login_response):
+    def __init__(self, parent_wnd, callback_register, callback_signin, update_received_entry) -> None:
 
         # set windows hierarchy
         self._parent_wnd = parent_wnd
@@ -31,7 +31,6 @@ class CLoginGUI:
         self._pw = ''
         self.callback_register = callback_register
         self.callback_signin = callback_signin
-        self.login_response: str = get_login_response
 
 
         self.create_ui()
@@ -87,12 +86,12 @@ class CLoginGUI:
 
 
         # Create Entry boxes
-        self._entry_login = tk.Entry(self._canvas,font=('Calibri',16),fg='#808080')
-        self._entry_login.insert(0,' ')
+        self._entry_login = tk.Entry(self._canvas,font=('Calibri',16),fg='#808080',)
+        self._entry_login.insert(0,'')
         self._entry_login.place(x=30,y=60)
 
         self._entry_pw = tk.Entry(self._canvas,font=('Calibri',16),fg='#808080')
-        self._entry_pw.insert(0," ")
+        self._entry_pw.insert(0,"")
         self._entry_pw.place(x=30,y=140)
 
     def run(self) -> None:
@@ -103,7 +102,6 @@ class CLoginGUI:
         self._pw = self._entry_pw.get()
         data = json.dumps({"login": self._login, "password": self._pw})
         self.callback_register(data)
-        self.message = self.login_response()
         
 
     def on_click_signin(self) -> None:
@@ -111,8 +109,6 @@ class CLoginGUI:
         self._pw: str = self._entry_pw.get()
         data: str = json.dumps({"login": self._login, "password": self._pw})
         self.callback_signin(data)
-        self.message['text'] = self.login_response()
-
 
 if __name__ == "__main__":
     wnd = CLoginGUI(None, None, None, None)

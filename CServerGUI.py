@@ -115,5 +115,5 @@ class CServerGUI(CServerBL):
 
 
 if __name__ == "__main__":
-    server = CServerGUI(CLIENT_HOST, PORT)
+    server = CServerGUI(SERVER_HOST, PORT)
     server.run()
