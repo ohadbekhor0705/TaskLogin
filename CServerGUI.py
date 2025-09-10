@@ -97,6 +97,8 @@ class CServerGUI(CServerBL):
         self._root.mainloop()
 
     def on_click_start(self):
+        self._host = self._entry_IP.get()
+        self._port: int = int(self._entry_Port.get())
         self._entry_IP.config(state="disabled")
         self._entry_Port.config(state="disabled")
         self._btn_start.config(state="disabled")
@@ -106,6 +108,7 @@ class CServerGUI(CServerBL):
         self._server_thread.start()
 
     def on_click_stop(self):
+        self.__
         self._entry_IP.config(state="normal")
         self._entry_Port.config(state="normal")
         self._btn_start.config(state="normal")

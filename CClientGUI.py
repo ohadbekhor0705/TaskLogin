@@ -113,6 +113,8 @@ class CClientGUI(CClientBL):
         self._root.mainloop()
 
     def on_click_connect(self) -> None:
+        self._host = self._entry_IP.get()
+        self._port: int = int(self._entry_Port.get())
         self._client_socket: socket = self.connect()
         if self._client_socket:
             self._entry_IP.config(state="disabled")
@@ -133,8 +135,8 @@ class CClientGUI(CClientBL):
             self._btn_login.config(state="disabled")
 
     def on_click_send(self) -> None:
-        cmd = self._entry_Send.get()
-        args = self._entry_Args.get()
+        cmd = self._entry_Send.get().strip()
+        args = self._entry_Args.get().strip()
         if cmd:
             self.send_data(cmd, args)
             # Use "after" to update the GUI after a short delay
@@ -145,13 +147,13 @@ class CClientGUI(CClientBL):
         def callback_register(data):
             write_to_log(f"[Client GUI] Register - Received data from Login Wnd : {data}")
             self.send_data("REG",data)
-            #self._root.after(100,self.update_received_entry)
+            self._root.after(100,self.update_received_entry)
 
         def callback_signin(data: json):
             write_to_log(f"[Client GUI] SignIn - Received data from Login Wnd : {data}")
             self.send_data("SIGNIN",data)
-            self.update_received_entry()
-            
+            self._root.after(100,self.update_received_entry)
+
         
         loc_wnd = CLoginGUI(self._root, callback_register, callback_signin, self.update_received_entry)
         loc_wnd.run()

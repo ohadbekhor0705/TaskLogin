@@ -96,7 +96,7 @@ class CClientHandler(threading.Thread):
                     response = create_response_msg_DB(cmd,args)
                 else:
                     response = "Non-supported cmd"
-                    response = f"{len(response):04d}{response}"
+                response = f"{len(response):04d}{response}"
 
                 # 5. Save to log
                 write_to_log("[SERVER_BL] send - " + response)
