@@ -61,8 +61,6 @@ class CLoginGUI:
         self._canvas.create_text(30,40,text='Login:',font=FONT_BUTTON,fill='#000000',anchor='w')
         self._canvas.create_text(30,120,text='Password:',font=FONT_BUTTON,fill='#000000',anchor='w')
         
-        self.message = Label(self._canvas, text="", font=('Calibri', 12), fg="#000000")
-        self.message.place(x=30, y=180)
 
         
 
