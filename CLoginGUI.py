@@ -9,7 +9,7 @@ FONT_BUTTON = (FONT,14)
 
 class CLoginGUI:
 
-    def __init__(self, parent_wnd, callback_register, callback_signin, update_received_entry) -> None:
+    def __init__(self, parent_wnd, callback_register, callback_signin) -> None:
 
         # set windows hierarchy
         self._parent_wnd = parent_wnd
@@ -61,10 +61,7 @@ class CLoginGUI:
         self._canvas.create_text(30,40,text='Login:',font=FONT_BUTTON,fill='#000000',anchor='w')
         self._canvas.create_text(30,120,text='Password:',font=FONT_BUTTON,fill='#000000',anchor='w')
         
-
         
-
-        self.message.pack()
         # Load button image
         self._img_btn = PhotoImage(file=BTN_IMAGE)
         img_btn_w = self._img_btn.width()
@@ -109,5 +106,5 @@ class CLoginGUI:
         self.callback_signin(data)
 
 if __name__ == "__main__":
-    wnd = CLoginGUI(None, None, None, None)
+    wnd = CLoginGUI(None, None, None)
     wnd.run()

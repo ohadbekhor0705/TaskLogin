@@ -32,7 +32,7 @@ class CClientGUI(CClientBL):
         self._btn_disconnect = None
         self._btn_send = None
         self._btn_login = None
-
+        self.server_response: str = ""
 
         self.create_ui()
 
@@ -153,9 +153,9 @@ class CClientGUI(CClientBL):
             write_to_log(f"[Client GUI] SignIn - Received data from Login Wnd : {data}")
             self.send_data("SIGNIN",data)
             self._root.after(100,self.update_received_entry)
-
         
-        loc_wnd = CLoginGUI(self._root, callback_register, callback_signin, self.update_received_entry)
+
+        loc_wnd = CLoginGUI(self._root, callback_register, callback_signin)
         loc_wnd.run()
 
     def update_received_entry(self) -> str:
