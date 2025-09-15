@@ -108,7 +108,6 @@ class CServerGUI(CServerBL):
         self._server_thread.start()
 
     def on_click_stop(self):
-        self.__
         self._entry_IP.config(state="normal")
         self._entry_Port.config(state="normal")
         self._btn_start.config(state="normal")
